@@ -5,14 +5,14 @@
 <input name="cep" placeholder="Digite o CEP">
 <button> Buscar </button>
 {% if result %}
- { if result.erro  %}
-     <p  style="color: red;"> {{result class="erro"}}</p>
- {% else %}
+    {% if result.erro  %}
+     <p  style="color: red;"> {{result.erro}}</p>
+    {% else %}
      <p><b>Rua:</b>{{result.logradouro}}</p>
      <p><b>Bairro:</b>{{result.bairro}}</p>
      <p><b>Cidade:</b>{{result.cidade}}</p>
      <p><b>Estado</b>{{result.estado}}</p>
 
-     {% endif %}
+    {% endif %}
 {% endif %}
 </form>

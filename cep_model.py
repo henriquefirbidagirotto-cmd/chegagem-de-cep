@@ -20,7 +20,7 @@ def buscar_cep_api_principal(cep):
 def buscar_cep_api_fallback(cep):
     try:
         response = requests.get(
-        f'{FALLBACK_URL}{cep}',
+        f'{FALLBACK_URL}{cep}/json',
         headers={'Acept':'application/json'},
         timeout=5
 
